@@ -1,0 +1,45 @@
+spring:
+  datasource:
+    dynamic:
+      datasource:
+        super:
+          url: jdbc:mysql://121.196.111.69:3306/ticket_system?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8
+          username: root
+          password: "062314"
+          driver-class-name: com.mysql.cj.jdbc.Driver
+        master_user:
+          url: jdbc:mysql://121.196.111.69:3306/ticket_system?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8
+          username: user
+          password: "user$062314"
+          driver-class-name: com.mysql.cj.jdbc.Driver
+        master_manager:
+          url: jdbc:mysql://121.196.111.69:3306/ticket_system?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8
+          username: manager
+          password: "manager$062314"
+          driver-class-name: com.mysql.cj.jdbc.Driver
+        slave_user:
+          url: jdbc:mysql://39.108.5.152:3306/ticket_system?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8
+          username: user
+          password: "user$062314"
+          driver-class-name: com.mysql.cj.jdbc.Driver
+        slave_manager:
+          url: jdbc:mysql://39.108.5.152:3306/ticket_system?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8
+          username: manager
+          password: "manager$062314"
+          driver-class-name: com.mysql.cj.jdbc.Driver
+      primary: super
+      strict: true
+    druid:
+      initial-size: 5
+      max-active: 50
+      min-idle: 10
+      max-wait: 60000
+  autoconfigure:
+    exclude: com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure
+
+jwt:
+  secret: "@o(zJyM=socoEb0*zcileog@nh^nzf49oiO%"
+
+logging:
+  level:
+    root: debug

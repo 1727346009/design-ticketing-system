@@ -1,4 +1,4 @@
-package com.buko.db.design_ticketing_system;
+package com.buko.db.designticketingsystem;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
